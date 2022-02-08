@@ -1,0 +1,85 @@
+:root {
+  --blanco: #FFFFFF;
+  --negro: #000000;
+  --gris: #757575;
+  --grisClaro: #DFE9F3;
+  
+  --color01: #000428;
+  --color02: #253242;
+  --color03: #2E486B;
+  --color04: #00626d;
+  --color05: #0097a7;
+  --color06: #1178B2;
+  --color07: #638EFF;
+  --color08: #60AABB;
+  --color09: #5FC1CA;
+  --color10: #ABCBFA;
+  --color11: #84D5C6;
+  --color12: #B5DAC1;
+  --color13: #E7FAF4;
+  --color14: #851452;
+  --color15: #bb3324;
+  --color16: #EE5543;
+  --color17: #F88DA7;
+  --color18: #EBA0A0;
+  --color19: #f1b46d;
+  --color20: #fdd070;  
+  --color21:  #ca750e;
+  --color22: #ffc793;
+
+  --fuente: 'Krub', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(to right, var(--color21) 16.69%, var(--color22));
+  font-family: var(--fuente);
+}
+
+.titulo {
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  background-color: var(--color04);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#canvas {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #d9d9d9;
+}
