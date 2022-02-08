@@ -3,7 +3,7 @@
   --negro: #000000;
   --gris: #757575;
   --grisClaro: #DFE9F3;
-  
+
   --color01: #000428;
   --color02: #253242;
   --color03: #2E486B;
@@ -24,10 +24,16 @@
   --color18: #EBA0A0;
   --color19: #f1b46d;
   --color20: #fdd070;  
-  --color21:  #ca750e;
+  --color21: #ca750e;
   --color22: #ffc793;
-
+  
   --fuente: 'Krub', sans-serif;
+
+  --color1: #DACC96;
+  --color2: #BF8B67;
+  --color3: #9D5353;
+  --color4: #632222;
+  --color5: #350f0f;
 }
 
 html {
@@ -45,15 +51,16 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, var(--color21) 16.69%, var(--color22));
+  background: linear-gradient(to right, var(--color4), var(--color2));
   font-family: var(--fuente);
 }
 
 .titulo {
+  color: #350f0f;
   padding: 15px;
-  width: 30vw;
+  font-size: 3.8rem;
+  font-weight: bold;
   margin: auto;
-
 }
 
 .btn {
@@ -61,10 +68,10 @@ body {
   color: white;
   font-weight: bold;
   background-color: var(--color04);
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.5em;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 
 .text-input {
@@ -72,7 +79,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: block;
   padding: 0.5em;
-  width: 30%;
+  width: 20%;
   margin-left: auto;
   margin-right: auto;
 }
