@@ -12,27 +12,36 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="inicio">
-      <div style="text-align:center; margin: 50px 0px 10px;">
-        <h1 class="titulo">Juego del Ahorcado con JavaScript</h1>
-        <button class="btn" id="iniciar-juego">INICIAR JUEGO</button>
+    <div id="inicio">      
+      <div style="text-align:center; margin: 50px 0px 0px;">
+        <h1 class="titulo">Juego del Ahorcado con <span>JavaScript</span></h1>
+        <h2 class="subtitulo">Instrucciones</h2>
+        <p class="parrafo">El objetivo de este juego es descubrir una palabra adivinando las letras que la componen.</p>
+        <p class="parrafo">Las mismas pueden tener entre 4 y 12 letras.</p>
+        <p class="parrafo">No se permiten números ni caracteres especiales.</p>
+        <p class="parrafo">Se pueden agregar palabras nuevas al diccionario, siempre que cumplan con los requisitos enunciados anteriormente.</p> 
       </div>
-      <div style="text-align:center">
+      <div id="botones-input" style="text-align:center">
+        <button class="btn" id="iniciar-juego">INICIAR JUEGO</button>
         <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
-        <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
+        <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button>        
       </div>
     </div>
-    <div  id="div-input-oculto" style="text-align:center;">
+    <div id="div-input-oculto" style="text-align:center;">
       <canvas id="canvas" height="500px" width="800px"></canvas>
       <div>
         <label for="input-oculto"></label>
         <input id="input-oculto" class="input-oculto" maxlength="1" name="input-oculto" type="text">
       </div>
     </div>
-    <div style="text-align:center">
+    <div id="botones-reiniciar-inicio" style="text-align:center">
       <button id="btn-reiniciar" class="btn">Jugar otra vez</button>
       <button id="btn-inicio" class="btn">Volver al inicio</button>
     </div>
+
+    <footer class="footer">
+      <p>Hecho con <span class="corazon">❤</span> por <span>Diego Fabián Di Giorgio</span> | &copy; 2022</p>
+    </footer>
     
     <script type="text/javascript" src="js/palabras.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
