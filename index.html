@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Juego del Ahorcado</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +22,18 @@
         <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
       </div>
     </div>
-    <div style="text-align:center;">
+    <div  id="div-input-oculto" style="text-align:center;">
       <canvas id="canvas" height="500px" width="800px"></canvas>
+      <div>
+        <label for="input-oculto"></label>
+        <input id="input-oculto" class="input-oculto" maxlength="1" name="input-oculto" type="text">
+      </div>
     </div>
+    <div style="text-align:center">
+      <button id="btn-reiniciar" class="btn">Jugar otra vez</button>
+      <button id="btn-inicio" class="btn">Volver al inicio</button>
+    </div>
+    
     <script type="text/javascript" src="js/palabras.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
     <script type="text/javascript" src="js/ahorcado.js"></script>

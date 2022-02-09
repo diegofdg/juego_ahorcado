@@ -69,9 +69,14 @@ body {
   font-weight: bold;
   background-color: var(--color04);
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
+}
+
+.btn:last-child {
+  margin-right: 0;
 }
 
 .text-input {
@@ -89,4 +94,14 @@ body {
   margin: 0 auto;
   display: block;
   border: 1px solid #d9d9d9;
+}
+
+.input-oculto {
+  display: block;
+  width: 0;
+  height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }

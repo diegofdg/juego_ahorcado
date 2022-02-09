@@ -1,29 +1,28 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-ctx.fillStyle = "#DACC96";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-
 function mostrarCanvas() {
-    console.log('mostrando canvas');    
     canvas.style.display = "block";
-    dibujarHorca();
+    ctx.fillStyle = "#DACC96";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    dibujarTriangulo();
     dibujarEspaciosPalabra(palabraSorteada);
 }
 
 function ocultarCanvas() {
-    console.log('ocultando canvas');    
     canvas.style.display = "none";
 }
 
-function dibujarHorca() {
+function dibujarTriangulo() {
     ctx.fillStyle = "#2e0101";
     ctx.beginPath();
     ctx.moveTo(50,450);
     ctx.lineTo(150,400)
     ctx.lineTo(250,450)
     ctx.fill();
+}
 
+function dibujarHorca() {
     ctx.beginPath();
     ctx.lineWidth = 10;
     ctx.moveTo(150,410);
@@ -89,7 +88,7 @@ function dibujarPieDerecho() {
     ctx.stroke();
 }
 
-function dibjarPieIzquierdo() {
+function dibujarPieIzquierdo() {
     ctx.beginPath();
     ctx.lineWidth = 20;
     ctx.moveTo(245,290);
@@ -138,29 +137,34 @@ function dibujarEspaciosPalabra(palabraSorteada) {
     }
 }
 
-function dibujarLetrasUsadas() {
-    for (let i = 0; i < 6; i++) {
-        ctx.fillStyle = "#c00000";
-        ctx.font = '40px Arial';
-        ctx.textAlign = "center";
-        let ejeX = i*45 + 400;
-        ctx.fillText('A', ejeX, 250);
-    }
+function reemplazarEspacioPorLetra(letra, index) {
+    ctx.fillStyle = "#2e0101";
+    ctx.font = '50px Arial';
+    ctx.textAlign = "center";
+    let ejeX = index*45 + 350;
+    ctx.fillText(letra, ejeX, 450);
+}
 
-    for (let i = 0; i < 6; i++) {
+function dibujarLetrasUsadas(letra, index) {
+    if(index < 7) {
         ctx.fillStyle = "#c00000";
         ctx.font = '40px Arial';
         ctx.textAlign = "center";
-        let ejeX = i*45 + 400;
-        ctx.fillText('A', ejeX, 300);
-    }
+        let ejeX = (index-1)*45 + 400;
+        ctx.fillText(letra, ejeX, 250);
 
-    for (let i = 0; i < 6; i++) {
+    } else if(index > 6 && index < 13) {
         ctx.fillStyle = "#c00000";
         ctx.font = '40px Arial';
         ctx.textAlign = "center";
-        let ejeX = i*45 + 400;
-        ctx.fillText('A', ejeX, 350);
+        let ejeX = (index-7)*45 + 400;
+        ctx.fillText(letra, ejeX, 300);
+    } else if(index > 12 && index < 19) {
+        ctx.fillStyle = "#c00000";
+        ctx.font = '40px Arial';
+        ctx.textAlign = "center";
+        let ejeX = (index-13)*45 + 400;
+        ctx.fillText(letra, ejeX, 350);
     }
 }
 
