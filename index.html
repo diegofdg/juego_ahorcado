@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,29 +12,32 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="inicio">      
-      <div style="text-align:center; margin: 50px 0px 0px;">
-        <h1 class="titulo">Juego del Ahorcado con <span>JavaScript</span></h1>
-        <h2 class="subtitulo">Instrucciones</h2>
+    <div id="contenedor-principal">      
+      <div class="instrucciones">
+        <h1 class="titulo">Juego del Ahorcado <span>con JavaScript</span></h1>
+        <h2 class="subtitulo">Instrucciones:</h2>        
         <p class="parrafo">El objetivo de este juego es descubrir una palabra adivinando las letras que la componen.</p>
         <p class="parrafo">Las mismas pueden tener entre 4 y 12 letras.</p>
         <p class="parrafo">No se permiten números ni caracteres especiales.</p>
         <p class="parrafo">Se pueden agregar palabras nuevas al diccionario, siempre que cumplan con los requisitos enunciados anteriormente.</p> 
       </div>
+      
       <div id="botones-input" style="text-align:center">
         <button class="btn" id="iniciar-juego">INICIAR JUEGO</button>
         <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
         <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button>        
       </div>
     </div>
-    <div id="div-input-oculto" style="text-align:center;">
+
+    <div id="contenedor-canvas" style="text-align:center;">
       <canvas id="canvas" height="500px" width="800px"></canvas>
       <div>
         <label for="input-oculto"></label>
         <input id="input-oculto" class="input-oculto" maxlength="1" name="input-oculto" type="text">
       </div>
     </div>
-    <div id="botones-reiniciar-inicio" style="text-align:center">
+
+    <div id="botones" style="text-align:center">
       <button id="btn-reiniciar" class="btn">Jugar otra vez</button>
       <button id="btn-inicio" class="btn">Volver al inicio</button>
     </div>
